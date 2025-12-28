@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.28)  28 DEC 2025 17:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.28)  28 DEC 2025 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,50 +732,55 @@ Package caption Info: End \AtBeginDocument code.
 <figures/REDCapSync.png, id=171, 435.32716pt x 501.33755pt>
 File: figures/REDCapSync.png Graphic file (type png)
 <use figures/REDCapSync.png>
-Package pdftex.def Info: figures/REDCapSync.png  used on input line 16.
+Package pdftex.def Info: figures/REDCapSync.png  used on input line 18.
 (pdftex.def)             Requested size: 99.58508pt x 177.11548pt.
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 30.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 26.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
 [1{/Users/brandonrose/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
  <./figures/REDCapSync.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
@@ -785,7 +790,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
@@ -800,17 +805,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--117
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
@@ -820,7 +825,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--177
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--179
+Underfull \hbox (badness 10000) in paragraph at lines 191--193
 
  []
 
@@ -830,12 +835,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--195
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 215--217
 
  []
 
@@ -850,22 +855,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--221
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
@@ -875,7 +880,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--251
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
  []
 
@@ -885,27 +890,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 267--269
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--286
+Underfull \hbox (badness 10000) in paragraph at lines 297--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--301
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 307--309
 
  []
 
@@ -915,17 +920,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 309--311
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--313
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--324
+Underfull \hbox (badness 10000) in paragraph at lines 320--322
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 324--326
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
 
@@ -935,17 +940,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 341--343
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--345
+Underfull \hbox (badness 10000) in paragraph at lines 357--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
 
  []
 
@@ -955,7 +960,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 369--371
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
+Underfull \hbox (badness 10000) in paragraph at lines 385--387
 
  []
 
@@ -965,12 +970,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 387--389
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--391
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 397--399
 
  []
 
@@ -980,17 +985,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 399--401
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--403
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 416--418
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--426
 
  []
 
@@ -1000,7 +1005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--428
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--430
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 
  []
 
@@ -1010,7 +1015,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 438--440
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--442
+Underfull \hbox (badness 10000) in paragraph at lines 450--452
 
  []
 
@@ -1020,7 +1025,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 452--454
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--456
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
 
  []
 
@@ -1030,7 +1035,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 464--466
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--468
+Underfull \hbox (badness 10000) in paragraph at lines 476--478
 
  []
 
@@ -1049,13 +1054,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 482--484
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 484--486
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 494--496
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--501
 
  []
 
@@ -1065,7 +1070,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 501--503
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--505
+Underfull \hbox (badness 10000) in paragraph at lines 514--516
 
  []
 
@@ -1075,12 +1080,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 516--518
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--520
+Underfull \hbox (badness 10000) in paragraph at lines 526--528
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--530
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
 
  []
 
@@ -1090,12 +1095,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--540
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--542
+Underfull \hbox (badness 10000) in paragraph at lines 548--550
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--552
+Underfull \hbox (badness 10000) in paragraph at lines 555--557
 
  []
 
@@ -1105,48 +1110,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 557--559
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--561
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 561--562
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
 No file RJwrapper.bbl.
 [7]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 581.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 581.
+(Font)              using `T1/zi4/m/n' instead on input line 579.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.20004pt on input line 581.
+(Font)              scaled to size 10.20004pt on input line 579.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 581.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 581.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 581.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 581.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 581.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -1155,32 +1155,32 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 581.
+(Font)              scaled to size 10.42007pt on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 581.
+(Font)              scaled to size 7.91925pt on input line 579.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 581.
+(Font)              scaled to size 6.25204pt on input line 579.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 581.
+(Font)              scaled to size 10.42007pt on input line 579.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 581.
+(Font)              scaled to size 7.91925pt on input line 579.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 581.
+(Font)              scaled to size 6.25204pt on input line 579.
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
-(Font)              scaled to size 10.20004pt on input line 581.
+(Font)              scaled to size 10.20004pt on input line 579.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 591--66
+Underfull \hbox (badness 10000) in paragraph at lines 589--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--66
+Underfull \hbox (badness 10000) in paragraph at lines 589--66
 
  []
 
@@ -1204,10 +1204,10 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  117i,12n,131p,1006b,816s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (8 pages, 177768 bytes).
+Output written on RJwrapper.pdf (8 pages, 177652 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
+ 258 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
  53 named destinations out of 1000 (max. 500000)
  49498 words of extra memory for PDF output out of 51595 (max. 10000000)
 
