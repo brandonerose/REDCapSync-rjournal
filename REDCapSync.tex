@@ -1,0 +1,591 @@
+% !TeX root = RJwrapper.tex
+\title{REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R}
+
+
+\author{by Brandon Rose and Natalie Goulett}
+
+\maketitle
+
+\abstract{%
+Many R packages exist for working with the various API endpoints but none have been established for an encapsulated ``get-everything'' work flow that produces a standardized R object. REDCapSync accomplishes this and can serve as a dynamic input object for downstream functions.
+}
+
+\section{Introduction}\label{introduction}
+
+\begin{figure}
+\includegraphics[width=0.25\linewidth,height=0.25\textheight]{figures/REDCapSync} \caption{REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R}\label{fig:redcapsync-logo}
+\end{figure}
+
+The REDCap API is so cool.
+\CRANpkg{REDCapR}
+\CRANpkg{redcapAPI}
+
+Enter REDCapSync \ldots{}
+
+\section{Abstract}\label{abstract}
+
+\begin{itemize}
+\tightlist
+\item
+  Brief description of REDCap as a dominant data capture platform in clinical research\\
+\item
+  Limitations of existing R packages interfacing with the REDCap API\\
+\item
+  Introduction of \emph{REDCapSync} as an encapsulated, state-aware representation of REDCap projects in R\\
+\item
+  Key contributions:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Project-level encapsulation of metadata and data
+  \item
+    Incremental synchronization rather than full re-downloads
+  \item
+    Export of structured, audit-friendly Excel workbooks with advanced features (e.g., deidentification)
+  \item
+    Designed for pipelines, analysis functions, and Shiny applications\\
+  \end{itemize}
+\item
+  Summary of current capabilities and future roadmap (bi-directional sync)
+\end{itemize}
+
+\section{Introduction}\label{introduction-1}
+
+Some REDCap API packages include \CRANpkg{REDCapR} and \CRANpkg{redcapAPI}\ldots{}
+
+One of the reasons people do not choose more complicated structures in REDCap, such as repeating instruments is the data exports require a manual or automated process to merge the data into a usable format. For example if you have non-repeating data in one form\ldots{}
+
+\subsection{REDCap in Clinical and Translational Research}\label{redcap-in-clinical-and-translational-research}
+
+\begin{itemize}
+\tightlist
+\item
+  Widespread use of REDCap for:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Clinical trials\\
+  \item
+    Observational cohorts\\
+  \item
+    Registries and quality improvement\\
+  \end{itemize}
+\item
+  Strengths of REDCap (governance, compliance, structured metadata)\\
+\item
+  Common downstream needs in R:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Analysis pipelines\\
+  \item
+    Reporting\\
+  \item
+    Visualization and applications
+  \end{itemize}
+\end{itemize}
+
+\subsection{The Gap Between REDCap and R Pipelines}\label{the-gap-between-redcap-and-r-pipelines}
+
+\begin{itemize}
+\tightlist
+\item
+  Typical REDCap-to-R workflows:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Stateless API pulls
+  \item
+    Flat data frames
+  \item
+    Manual post-processing
+  \end{itemize}
+\item
+  Consequences:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Redundant API calls\\
+  \item
+    Loss of project structure\\
+  \item
+    Fragile downstream code\\
+  \item
+    Poor support for reproducibility and automation
+  \end{itemize}
+\end{itemize}
+
+\section{Key Design Choices}\label{key-design-choices}
+
+\begin{itemize}
+\tightlist
+\item
+  No API token stored anywhere except user-defined renviron, not in cache, project object, global environment, or code.
+\item
+  deidentify Excel outputs by default
+\end{itemize}
+
+\section{Hypothetical}\label{hypothetical}
+
+You are working on a research project collecting surveys from hundreds of participants. You are writing code that makes a visual.
+
+\section{Who is REDCapSync for?}\label{who-is-redcapsync-for}
+
+\section{Related Work and Limitations of Existing Packages}\label{related-work-and-limitations-of-existing-packages}
+
+\subsection{Existing REDCap R Packages}\label{existing-redcap-r-packages}
+
+\begin{itemize}
+\tightlist
+\item
+  API wrappers\\
+\item
+  Data-frame--oriented imports\\
+\item
+  Metadata access utilities
+\end{itemize}
+
+\subsection{Common Design Pattern: Stateless Data Access}\label{common-design-pattern-stateless-data-access}
+
+\begin{itemize}
+\tightlist
+\item
+  Existing tools primarily:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Fetch data on demand
+  \item
+    Return tables or lists
+  \item
+    Leave project structure implicit
+  \end{itemize}
+\item
+  Lack of:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Encapsulation\\
+  \item
+    Persistent project state\\
+  \item
+    Awareness of prior syncs
+  \end{itemize}
+\end{itemize}
+
+\subsection{Why Encapsulation Matters}\label{why-encapsulation-matters}
+
+\begin{itemize}
+\tightlist
+\item
+  Contrast with object-oriented or stateful designs in:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Database interfaces\\
+  \item
+    Data pipelines\\
+  \item
+    ETL frameworks\\
+  \end{itemize}
+\item
+  Motivation for a higher-level abstraction representing a \textbf{REDCap project as an object}
+\end{itemize}
+
+\section{Design Philosophy of REDCapSync}\label{design-philosophy-of-redcapsync}
+
+\subsection{Encapsulated REDCap Projects}\label{encapsulated-redcap-projects}
+
+\begin{itemize}
+\tightlist
+\item
+  Core concept: a REDCap project is represented as a \textbf{single structured R object}
+\item
+  Encapsulation of:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Project metadata\\
+  \item
+    Instruments and fields\\
+  \item
+    Records and events\\
+  \item
+    Sync state and provenance
+  \end{itemize}
+\end{itemize}
+
+\subsection{Separation of Concerns}\label{separation-of-concerns}
+
+\begin{itemize}
+\tightlist
+\item
+  Clear distinction between:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Data retrieval\\
+  \item
+    Transformation\\
+  \item
+    Export and downstream usage\\
+  \end{itemize}
+\item
+  Benefits for:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Reproducibility\\
+  \item
+    Testing\\
+  \item
+    Modularity
+  \end{itemize}
+\end{itemize}
+
+\subsection{Designed for Pipelines, Not Just Data Access}\label{designed-for-pipelines-not-just-data-access}
+
+\begin{itemize}
+\tightlist
+\item
+  Object persists across:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Scripts\\
+  \item
+    Functions\\
+  \item
+    Shiny applications\\
+  \end{itemize}
+\item
+  Enables consistent behavior across contexts
+\end{itemize}
+
+\section{Incremental Synchronization}\label{incremental-synchronization}
+
+\subsection{Motivation}\label{motivation}
+
+\begin{itemize}
+\tightlist
+\item
+  Large projects and frequent data updates\\
+\item
+  Inefficiency of full data re-downloads
+\end{itemize}
+
+\subsection{Selective Updating}\label{selective-updating}
+
+\begin{itemize}
+\tightlist
+\item
+  REDCapSync tracks:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    What has already been retrieved\\
+  \item
+    Which components need refreshing\\
+  \end{itemize}
+\item
+  Supports:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Metadata-only updates\\
+  \item
+    Data-only updates\\
+  \item
+    Targeted form or event updates
+  \end{itemize}
+\end{itemize}
+
+\subsection{Benefits}\label{benefits}
+
+\begin{itemize}
+\tightlist
+\item
+  Reduced API load\\
+\item
+  Faster iteration\\
+\item
+  Improved stability in automated workflows
+\end{itemize}
+
+\section{Structured Excel Export as a First-Class Feature}\label{structured-excel-export-as-a-first-class-feature}
+
+\subsection{Excel as an Interoperability Layer}\label{excel-as-an-interoperability-layer}
+
+\begin{itemize}
+\tightlist
+\item
+  Excel remains a dominant format for:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Clinical teams\\
+  \item
+    Data managers\\
+  \item
+    Regulatory workflows
+  \end{itemize}
+\end{itemize}
+
+\subsection{Custom Excel Workbooks}\label{custom-excel-workbooks}
+
+\begin{itemize}
+\tightlist
+\item
+  REDCapSync exports:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Multiple sheets reflecting project structure\\
+  \item
+    Consistent naming and formatting\\
+  \end{itemize}
+\item
+  Preserves:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Metadata context\\
+  \item
+    Variable labels\\
+  \item
+    Choice mappings
+  \end{itemize}
+\end{itemize}
+
+\subsection{Advanced Features}\label{advanced-features}
+
+\begin{itemize}
+\tightlist
+\item
+  Built-in support for:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Deidentification strategies\\
+  \item
+    Derived fields\\
+  \item
+    Project-specific annotations\\
+  \end{itemize}
+\item
+  Designed for:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Review\\
+  \item
+    Sharing\\
+  \item
+    Archival
+  \end{itemize}
+\end{itemize}
+
+\section{Applications}\label{applications}
+
+\subsection{Clinical Trials}\label{clinical-trials}
+
+\begin{itemize}
+\tightlist
+\item
+  Ongoing data monitoring\\
+\item
+  Interim analyses\\
+\item
+  Regulatory-compliant exports
+\end{itemize}
+
+\subsection{Observational and Registry Studies}\label{observational-and-registry-studies}
+
+\begin{itemize}
+\tightlist
+\item
+  Longitudinal data handling\\
+\item
+  Incremental updates\\
+\item
+  Consistent downstream datasets
+\end{itemize}
+
+\subsection{Shiny Applications and Dashboards}\label{shiny-applications-and-dashboards}
+
+\begin{itemize}
+\tightlist
+\item
+  Live, synchronized project objects\\
+\item
+  Reduced logic duplication\\
+\item
+  Stable data interfaces
+\end{itemize}
+
+\section{Implementation}\label{implementation}
+
+\subsection{Package Architecture}\label{package-architecture}
+
+\begin{itemize}
+\tightlist
+\item
+  Internal object structure\\
+\item
+  Use of R lists / classes\\
+\item
+  Dependency philosophy
+\end{itemize}
+
+\subsection{Reproducibility and Transparency}\label{reproducibility-and-transparency}
+
+\begin{itemize}
+\tightlist
+\item
+  Explicit sync steps\\
+\item
+  Inspectable internal state\\
+\item
+  Alignment with reproducible research practices
+\end{itemize}
+
+\section{Comparison with Existing Approaches}\label{comparison-with-existing-approaches}
+
+\subsection{Feature Comparison}\label{feature-comparison}
+
+\begin{itemize}
+\tightlist
+\item
+  Stateless API wrappers vs REDCapSync\\
+\item
+  Encapsulation\\
+\item
+  Incremental sync\\
+\item
+  Structured Excel export\\
+\item
+  Pipeline integration
+\end{itemize}
+
+\subsection{When to Use REDCapSync}\label{when-to-use-redcapsync}
+
+\begin{itemize}
+\tightlist
+\item
+  Not a replacement for all REDCap tools\\
+\item
+  Best suited for:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Long-lived projects\\
+  \item
+    Repeated analyses\\
+  \item
+    Applications and automated pipelines
+  \end{itemize}
+\end{itemize}
+
+\section{Future Directions}\label{future-directions}
+
+\subsection{Bi-Directional Synchronization}\label{bi-directional-synchronization}
+
+\begin{itemize}
+\tightlist
+\item
+  Uploading data from previously exported Excel workbooks\\
+\item
+  Validation against metadata\\
+\item
+  Controlled updates back to REDCap
+\end{itemize}
+
+\subsection{Extended Deidentification and Governance Features}\label{extended-deidentification-and-governance-features}
+
+\begin{itemize}
+\tightlist
+\item
+  Project-level policies\\
+\item
+  Role-based exports
+\end{itemize}
+
+\subsection{Ecosystem Integration}\label{ecosystem-integration}
+
+\begin{itemize}
+\tightlist
+\item
+  Downstream analysis packages\\
+\item
+  Shiny app wrappers\\
+\item
+  File-system--based project organization
+\end{itemize}
+
+\section{Conclusion}\label{conclusion}
+
+\begin{itemize}
+\tightlist
+\item
+  REDCapSync introduces a new abstraction for working with REDCap in R\\
+\item
+  Encapsulation enables:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    More robust pipelines\\
+  \item
+    Better reproducibility\\
+  \item
+    Reduced cognitive and technical overhead\\
+  \end{itemize}
+\item
+  Positions REDCap projects as durable, inspectable R objects rather than transient API responses
+\end{itemize}
+
+\section{Acknowlegements}\label{acknowlegements}
+
+Raymond Balise, Jonathan Trent, Gina D'Amato, Alberto Caban-Martiniez, Erin Kobetz, Aman Chauhan
+
+\bibliography{RJreferences.bib}
+
+\address{%
+Brandon Rose\\
+University of Texas Southwestern Medical Center\\%
+Hematology/Oncology Department\\ Dallas, TX, USA\\
+%
+\url{https://www.thecodingdocs.com/}\\%
+\textit{ORCiD: \href{https://orcid.org/0009-0009-7813-1960}{0009-0009-7813-1960}}\\%
+\href{mailto:TheCodingDocs@gmail.com}{\nolinkurl{TheCodingDocs@gmail.com}}%
+}
+
+\address{%
+Natalie Goulett\\
+\\%
+\\
+%
+%
+%
+\href{mailto:fakeexample@gmail.com}{\nolinkurl{fakeexample@gmail.com}}%
+}

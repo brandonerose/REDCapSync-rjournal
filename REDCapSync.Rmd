@@ -1,0 +1,272 @@
+---
+title: "REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"
+date: "2026-01-29"
+abstract: >
+  Many R packages exist for working with the various API endpoints but none have
+  been established for an encapsulated "get-everything" work flow that produces
+  a standardized R object. REDCapSync accomplishes this and can serve as a 
+  dynamic input object for downstream functions.
+draft: true
+author:  
+  - name: Brandon Rose
+    affiliation: University of Texas Southwestern Medical Center
+    address:
+    - Hematology/Oncology Department
+    - Dallas, TX, USA
+    url: https://www.thecodingdocs.com/
+    orcid: 0009-0009-7813-1960
+    email:  TheCodingDocs@gmail.com
+  - name: Natalie Goulett
+    email:  fakeexample@gmail.com
+type: package
+output: 
+  rjtools::rjournal_article:
+    self_contained: yes
+    toc: no
+bibliography: RJreferences.bib
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(plotly)
+library(ggplot2)
+library(palmerpenguins)
+library(kableExtra)
+```
+
+# Introduction 
+<!-- #REDCapSync <a href="https://github.com/thecodingdocs/REDCapSync/"><img src="figures/REDCapSync.png" align="right" height="80" width="70"/></a> -->
+
+```{r redcapsync-logo, out.width = "25%", out.height = "25%", fig.cap = "REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"}
+knitr::include_graphics("figures/REDCapSync.png")
+```
+
+The REDCap API is so cool.
+\CRANpkg{REDCapR}
+\CRANpkg{redcapAPI}
+
+Enter REDCapSync ...
+
+# Abstract
+- Brief description of REDCap as a dominant data capture platform in clinical research  
+- Limitations of existing R packages interfacing with the REDCap API  
+- Introduction of *REDCapSync* as an encapsulated, state-aware representation of REDCap projects in R  
+- Key contributions:
+  - Project-level encapsulation of metadata and data
+  - Incremental synchronization rather than full re-downloads
+  - Export of structured, audit-friendly Excel workbooks with advanced features (e.g., deidentification)
+  - Designed for pipelines, analysis functions, and Shiny applications  
+- Summary of current capabilities and future roadmap (bi-directional sync)
+
+# Introduction  
+
+Some REDCap API packages include \CRANpkg{REDCapR} and \CRANpkg{redcapAPI}...
+
+One of the reasons people do not choose more complicated structures in REDCap, such as repeating instruments is the data exports require a manual or automated process to merge the data into a usable format. For example if you have non-repeating data in one form...
+
+## REDCap in Clinical and Translational Research  
+- Widespread use of REDCap for:
+  - Clinical trials  
+  - Observational cohorts  
+  - Registries and quality improvement  
+- Strengths of REDCap (governance, compliance, structured metadata)  
+- Common downstream needs in R:
+  - Analysis pipelines  
+  - Reporting  
+  - Visualization and applications  
+
+## The Gap Between REDCap and R Pipelines  
+- Typical REDCap-to-R workflows:
+  - Stateless API pulls
+  - Flat data frames
+  - Manual post-processing
+- Consequences:
+  - Redundant API calls  
+  - Loss of project structure  
+  - Fragile downstream code  
+  - Poor support for reproducibility and automation  
+
+# Key Design Choices
+
+- No API token stored anywhere except user-defined renviron, not in cache, project object, global environment, or code.
+- deidentify Excel outputs by default
+
+# Hypothetical
+
+You are working on a research project collecting surveys from hundreds of participants. You are writing code that makes a visual.
+
+# Who is REDCapSync for?
+
+
+
+# Related Work and Limitations of Existing Packages  
+
+## Existing REDCap R Packages  
+- API wrappers  
+- Data-frame–oriented imports  
+- Metadata access utilities  
+
+## Common Design Pattern: Stateless Data Access  
+- Existing tools primarily:
+  - Fetch data on demand
+  - Return tables or lists
+  - Leave project structure implicit
+- Lack of:
+  - Encapsulation  
+  - Persistent project state  
+  - Awareness of prior syncs  
+
+## Why Encapsulation Matters  
+- Contrast with object-oriented or stateful designs in:
+  - Database interfaces  
+  - Data pipelines  
+  - ETL frameworks  
+- Motivation for a higher-level abstraction representing a **REDCap project as an object**
+
+# Design Philosophy of REDCapSync  
+
+## Encapsulated REDCap Projects  
+- Core concept: a REDCap project is represented as a **single structured R object**
+- Encapsulation of:
+  - Project metadata  
+  - Instruments and fields  
+  - Records and events  
+  - Sync state and provenance  
+
+## Separation of Concerns  
+- Clear distinction between:
+  - Data retrieval  
+  - Transformation  
+  - Export and downstream usage  
+- Benefits for:
+  - Reproducibility  
+  - Testing  
+  - Modularity  
+
+## Designed for Pipelines, Not Just Data Access  
+- Object persists across:
+  - Scripts  
+  - Functions  
+  - Shiny applications  
+- Enables consistent behavior across contexts  
+
+# Incremental Synchronization  
+
+## Motivation  
+- Large projects and frequent data updates  
+- Inefficiency of full data re-downloads  
+
+## Selective Updating  
+- REDCapSync tracks:
+  - What has already been retrieved  
+  - Which components need refreshing  
+- Supports:
+  - Metadata-only updates  
+  - Data-only updates  
+  - Targeted form or event updates  
+
+## Benefits  
+- Reduced API load  
+- Faster iteration  
+- Improved stability in automated workflows  
+
+# Structured Excel Export as a First-Class Feature  
+
+## Excel as an Interoperability Layer  
+- Excel remains a dominant format for:
+  - Clinical teams  
+  - Data managers  
+  - Regulatory workflows  
+
+## Custom Excel Workbooks  
+- REDCapSync exports:
+  - Multiple sheets reflecting project structure  
+  - Consistent naming and formatting  
+- Preserves:
+  - Metadata context  
+  - Variable labels  
+  - Choice mappings  
+
+## Advanced Features  
+- Built-in support for:
+  - Deidentification strategies  
+  - Derived fields  
+  - Project-specific annotations  
+- Designed for:
+  - Review  
+  - Sharing  
+  - Archival  
+
+# Applications  
+
+## Clinical Trials  
+- Ongoing data monitoring  
+- Interim analyses  
+- Regulatory-compliant exports  
+
+## Observational and Registry Studies  
+- Longitudinal data handling  
+- Incremental updates  
+- Consistent downstream datasets  
+
+## Shiny Applications and Dashboards  
+- Live, synchronized project objects  
+- Reduced logic duplication  
+- Stable data interfaces  
+
+# Implementation  
+
+## Package Architecture  
+- Internal object structure  
+- Use of R lists / classes  
+- Dependency philosophy  
+
+## Reproducibility and Transparency  
+- Explicit sync steps  
+- Inspectable internal state  
+- Alignment with reproducible research practices  
+
+# Comparison with Existing Approaches  
+
+## Feature Comparison  
+- Stateless API wrappers vs REDCapSync  
+- Encapsulation  
+- Incremental sync  
+- Structured Excel export  
+- Pipeline integration  
+
+## When to Use REDCapSync  
+- Not a replacement for all REDCap tools  
+- Best suited for:
+  - Long-lived projects  
+  - Repeated analyses  
+  - Applications and automated pipelines  
+
+# Future Directions  
+
+## Bi-Directional Synchronization  
+- Uploading data from previously exported Excel workbooks  
+- Validation against metadata  
+- Controlled updates back to REDCap  
+
+## Extended Deidentification and Governance Features  
+- Project-level policies  
+- Role-based exports  
+
+## Ecosystem Integration  
+- Downstream analysis packages  
+- Shiny app wrappers  
+- File-system–based project organization  
+
+# Conclusion  
+- REDCapSync introduces a new abstraction for working with REDCap in R  
+- Encapsulation enables:
+  - More robust pipelines  
+  - Better reproducibility  
+  - Reduced cognitive and technical overhead  
+- Positions REDCap projects as durable, inspectable R objects rather than transient API responses
+
+# Acknowlegements
+Raymond Balise, Jonathan Trent, Gina D'Amato, Alberto Caban-Martiniez, Erin Kobetz, Aman Chauhan
+

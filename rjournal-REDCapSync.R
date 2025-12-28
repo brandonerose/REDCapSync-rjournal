@@ -1,0 +1,7 @@
+# library("REDCapSync") # install.packages("REDCapSync")
+# library("rjtools") # install.packages("rjtools")
+# create_article(name = "REDCapSync")
+# pandoc::pandoc_activate(version = '3.1.6')
+rmarkdown::render("REDCapSync.Rmd", output_format = "all")
+browseURL("REDCapSync.html")
+browseURL("REDCapSync.pdf")
