@@ -35,14 +35,6 @@ library(palmerpenguins)
 library(kableExtra)
 ```
 
-# Introduction 
-
-REDCapSync <a href="https://github.com/thecodingdocs/REDCapSync/"><img src="figures/REDCapSync.png" align="right" height="80" width="70"/></a>
-
-```{r redcapsync-logo, out.width = "25%", out.height = "25%", fig.cap = "REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"}
-knitr::include_graphics("figures/REDCapSync.png")
-```
-
 # Abstract
 - Brief description of REDCap as a dominant data capture platform in clinical research  
 - Limitations of existing R packages interfacing with the REDCap API  
@@ -56,7 +48,11 @@ knitr::include_graphics("figures/REDCapSync.png")
 
 # Introduction  
 
-Some REDCap API packages include \CRANpkg{REDCapR} and \CRANpkg{redcapAPI}...
+```{r redcapsync-logo, out.width = "45%", out.height = "25%", fig.cap = "REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"}
+knitr::include_graphics("figures/REDCapSync.png")
+```
+
+Some REDCap API packages include \CRANpkg{REDCapR}, \CRANpkg{redcapAPI}, \CRANpkg{tidyREDCap}...
 
 One of the reasons people do not choose more complicated structures in REDCap, such as repeating instruments is the data exports require a manual or automated process to merge the data into a usable format. For example if you have non-repeating data in one form...
 

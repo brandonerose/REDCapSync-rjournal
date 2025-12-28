@@ -9,6 +9,6 @@ library(palmerpenguins)
 library(kableExtra)
 
 
-## ----redcapsync-logo, out.width = "25%", out.height = "25%", fig.cap = "REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"----
+## ----redcapsync-logo, out.width = "45%", out.height = "25%", fig.cap = "REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"----
 knitr::include_graphics("figures/REDCapSync.png")
 
