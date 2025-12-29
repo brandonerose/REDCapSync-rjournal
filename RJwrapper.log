@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.28)  28 DEC 2025 17:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.28)  28 DEC 2025 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,7 +756,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 File: figures/REDCapSync.png Graphic file (type png)
 <use figures/REDCapSync.png>
 Package pdftex.def Info: figures/REDCapSync.png  used on input line 44.
-(pdftex.def)             Requested size: 179.25583pt x 177.11548pt.
+(pdftex.def)             Requested size: 99.58508pt x 106.26317pt.
 [1{/Users/brandonrose/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
  <./figures/REDCapSync.png>]
@@ -809,12 +809,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 142--144
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 169--171
 
  []
@@ -859,7 +859,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
-[3]
+
 Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
@@ -874,7 +874,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 245--247
 
  []
@@ -924,12 +924,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--318
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 318--320
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 335--337
 
  []
@@ -989,7 +989,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 410--412
 
  []
@@ -999,7 +999,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 420--422
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 422--424
 
  []
@@ -1054,7 +1054,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 478--480
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 488--490
 
  []
@@ -1064,7 +1064,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 495--497
 
  []
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 497--499
 
  []
@@ -1115,7 +1115,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 555--556
  []
 
 No file RJwrapper.bbl.
-[7]
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 575.
 (/Users/brandonrose/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
@@ -1174,7 +1173,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 575.
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
 (Font)              scaled to size 10.20004pt on input line 575.
-)
+[7])
 Underfull \hbox (badness 10000) in paragraph at lines 585--66
 
  []
@@ -1198,13 +1197,13 @@ Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
 Here is how much of TeX's memory you used:
  26888 strings out of 469519
  492633 string characters out of 5468618
- 910795 words of memory out of 5000000
+ 911795 words of memory out of 5000000
  54908 multiletter control sequences out of 15000+600000
  654960 words of font info for 147 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,12n,131p,1006b,812s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,11n,131p,1006b,887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/brandonrose/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (8 pages, 177592 bytes).
+Output written on RJwrapper.pdf (8 pages, 177628 bytes).
 PDF statistics:
  255 PDF objects out of 1000 (max. 8388607)
  232 compressed objects within 3 object streams
