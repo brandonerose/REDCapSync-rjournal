@@ -17,7 +17,8 @@ author:
     orcid: 0009-0009-7813-1960
     email:  TheCodingDocs@gmail.com
   - name: Natalie Goulett
-    email:  fakeexample@gmail.com
+    email:  nataliegoulett@gmail.com
+    orcid: 0009-0002-0961-9665
 type: package
 output: 
   rjtools::rjournal_article:
@@ -45,6 +46,10 @@ library(kableExtra)
   - Export of structured, audit-friendly Excel workbooks with advanced features (e.g., deidentification)
   - Designed for pipelines, analysis functions, and Shiny applications  
 - Summary of current capabilities and future roadmap (bi-directional sync)
+
+REDCap is widely used for building and maintaining surveys and research databases. Research teams often rely on REDCap's API to pull data into R for analysis and reporting. Many workflows still treat each pull as a one-time request that returns a flat table, which is followed by local, study-specific cleaning and merging. Scripts often re-download the same data entirely, regardless of what has changed. When a study expands, data collection becomes longitudinal, or teams use repeating instruments, such pipelines tend to break down.
+
+REDCapSync introduces a project-centered workflow in R. Each REDCap project is encapsulated as a state-aware R6 object that stores data and metadata together, along with sync state and provenance information. Repeated full downloads are replaced with incremental synchronization based on REDCap activity logs to minimize unnecessary API calls. Users can configure the export of structured, audit-friendly Excel workbooks that preserve metadata context and can de-identify data in accordance with common sharing and review practices. The package comes with a suite of helper methods for applying consistent cleaning and labeling rules and streamlining exports to support robust downstream Shiny applications, pipelines, and analysis functions.
 
 # Introduction  
 
@@ -125,8 +130,12 @@ You are working on a research project collecting surveys from hundreds of partic
   - Project metadata  
   - Instruments and fields  
   - Records and events  
-  - Sync state and provenance  
-
+  - Sync state and provenance
+  
+  The central unit in REDCapSync is the encapsulated project object, which is first configured using `setup_project()`. Project setup information cached by REDCapSync includes a user-provided project name, token name, and REDCap directory path, *not* API tokens or other sensitive information. This setup makes it easy to discover what projects exist locally and to reload them without re-configuration.
+  
+  In the simplest case, the object holds a named list of instrument data frames alongside metadata tables describing forms, fields, and project design mappings. Additionally, it contains project-level data like the REDCap version, title, and project ID. The metadata required to interpret fields is available without additional API calls or dependencies, streamlining downstream tasks.
+ 
 ## Separation of Concerns  
 - Clear distinction between:
   - Data retrieval  
@@ -135,8 +144,10 @@ You are working on a research project collecting surveys from hundreds of partic
 - Benefits for:
   - Reproducibility  
   - Testing  
-  - Modularity  
-
+  - Modularity
+  
+  REDCapSync also makes separation of concerns explicit. The `sync()` method retrieves and refreshes project data. Transformation produces analysis-ready exports, such as merged non-repeating forms or fully flattened tables. Export writes structured data to Excel workbooks for sharing and review. Those stages can be used together in a pipeline, but they do not need to be tangled together in user code. This helps teams conduct testing and share small functions that operate on a standardized project object.
+  
 ## Designed for Pipelines, Not Just Data Access  
 - Object persists across:
   - Scripts  
@@ -213,7 +224,7 @@ You are working on a research project collecting surveys from hundreds of partic
 ## Package Architecture  
 - Internal object structure  
 - Use of R lists / classes  
-- Dependency philosophy  
+- Dependency philosophy
 
 ## Reproducibility and Transparency  
 - Explicit sync steps  
