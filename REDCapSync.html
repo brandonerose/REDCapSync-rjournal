@@ -20,8 +20,9 @@ visibility: hidden;
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -127,7 +128,7 @@ code span.wa { color: #5e5e5e; font-style: italic; }
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","description","draft","author","type","output","bibliography","journal","slug","pdf_url","creative_commons","packages","CTV","csl"]}},"value":[{"type":"character","attributes":{},"value":["REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"]},{"type":"character","attributes":{},"value":["2026-01-29"]},{"type":"character","attributes":{},"value":["Many R packages exist for working with the various API endpoints but none have been established for an encapsulated \"get-everything\" work flow that produces a standardized R object. REDCapSync accomplishes this and can serve as a  dynamic input object for downstream functions.\n"]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","address","url","orcid_id","email"]}},"value":[{"type":"character","attributes":{},"value":["Brandon Rose"]},{"type":"character","attributes":{},"value":["University of Texas Southwestern Medical Center"]},{"type":"character","attributes":{},"value":["Hematology/Oncology Department","Dallas, TX, USA"]},{"type":"character","attributes":{},"value":["https://www.thecodingdocs.com/"]},{"type":"character","attributes":{},"value":["0009-0009-7813-1960"]},{"type":"character","attributes":{},"value":["TheCodingDocs@gmail.com"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email"]}},"value":[{"type":"character","attributes":{},"value":["Natalie Goulett"]},{"type":"character","attributes":{},"value":["fakeexample@gmail.com"]}]}]},{"type":"character","attributes":{},"value":["package"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["RJreferences.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","issn","firstpage","lastpage"]}},"value":[{"type":"character","attributes":{},"value":["The R Journal"]},{"type":"character","attributes":{},"value":["2073-4859"]},{"type":"double","attributes":{},"value":[1]},{"type":"NULL"}]},{"type":"character","attributes":{},"value":["REDCapSync"]},{"type":"character","attributes":{},"value":["REDCapSync.pdf"]},{"type":"character","attributes":{},"value":["CC BY"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["cran","bioc"]}},"value":[{"type":"character","attributes":{},"value":["REDCapR","redcapAPI","tidyREDCap"]},{"type":"list","attributes":{},"value":[]}]},{"type":"character","attributes":{},"value":["WebTechnologies"]},{"type":"character","attributes":{},"value":["/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library/rjtools/rjournal.csl"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","description","draft","author","type","output","bibliography","journal","slug","pdf_url","creative_commons","packages","CTV","csl"]}},"value":[{"type":"character","attributes":{},"value":["REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R"]},{"type":"character","attributes":{},"value":["2026-01-29"]},{"type":"character","attributes":{},"value":["Many R packages exist for working with the various API endpoints but none have been established for an encapsulated \"get-everything\" work flow that produces a standardized R object. REDCapSync accomplishes this and can serve as a  dynamic input object for downstream functions.\n"]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","address","url","orcid_id","email"]}},"value":[{"type":"character","attributes":{},"value":["Brandon Rose"]},{"type":"character","attributes":{},"value":["University of Texas Southwestern Medical Center"]},{"type":"character","attributes":{},"value":["Hematology/Oncology Department","Dallas, TX, USA"]},{"type":"character","attributes":{},"value":["https://www.thecodingdocs.com/"]},{"type":"character","attributes":{},"value":["0009-0009-7813-1960"]},{"type":"character","attributes":{},"value":["TheCodingDocs@gmail.com"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Natalie Goulett"]},{"type":"character","attributes":{},"value":["nataliegoulett@gmail.com"]},{"type":"character","attributes":{},"value":["0009-0002-0961-9665"]}]}]},{"type":"character","attributes":{},"value":["package"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["RJreferences.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","issn","firstpage","lastpage"]}},"value":[{"type":"character","attributes":{},"value":["The R Journal"]},{"type":"character","attributes":{},"value":["2073-4859"]},{"type":"double","attributes":{},"value":[1]},{"type":"NULL"}]},{"type":"character","attributes":{},"value":["REDCapSync"]},{"type":"character","attributes":{},"value":["REDCapSync.pdf"]},{"type":"character","attributes":{},"value":["CC BY"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["cran","bioc"]}},"value":[{"type":"character","attributes":{},"value":["REDCapR","redcapAPI","tidyREDCap"]},{"type":"list","attributes":{},"value":[]}]},{"type":"character","attributes":{},"value":["WebTechnologies"]},{"type":"character","attributes":{},"value":["/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library/rjtools/rjournal.csl"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2551,7 +2552,7 @@ font-size: 20px;
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R","description":"Many R packages exist for working with the various API endpoints but none have been established for an encapsulated \"get-everything\" work flow that produces a standardized R object. REDCapSync accomplishes this and can serve as a  dynamic input object for downstream functions.","authors":[{"author":"Brandon Rose","authorURL":"https://www.thecodingdocs.com/","affiliation":"University of Texas Southwestern Medical Center","affiliationURL":"#","orcidID":"0009-0009-7813-1960"},{"author":"Natalie Goulett","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2026-01-29T00:00:00.000-06:00","citationText":"Rose & Goulett, 2026"}
+{"title":"REDCapSync: Encapsulated REDCap projects for pipelines, functions, and applications in R","description":"Many R packages exist for working with the various API endpoints but none have been established for an encapsulated \"get-everything\" work flow that produces a standardized R object. REDCapSync accomplishes this and can serve as a  dynamic input object for downstream functions.","authors":[{"author":"Brandon Rose","authorURL":"https://www.thecodingdocs.com/","affiliation":"University of Texas Southwestern Medical Center","affiliationURL":"#","orcidID":"0009-0009-7813-1960"},{"author":"Natalie Goulett","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":"0009-0002-0961-9665"}],"publishedDate":"2026-01-29T00:00:00.000-06:00","citationText":"Rose & Goulett, 2026"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2595,6 +2596,8 @@ font-size: 20px;
 </ul></li>
 <li>Summary of current capabilities and future roadmap (bi-directional sync)</li>
 </ul>
+<p>REDCap is widely used for building and maintaining surveys and research databases. Research teams often rely on REDCap’s API to pull data into R for analysis and reporting. Many workflows still treat each pull as a one-time request that returns a flat table, which is followed by local, study-specific cleaning and merging. Scripts often re-download the same data entirely, regardless of what has changed. When a study expands, data collection becomes longitudinal, or teams use repeating instruments, such pipelines tend to break down.</p>
+<p>REDCapSync introduces a project-centered workflow in R. Each REDCap project is encapsulated as a state-aware R6 object that stores data and metadata together, along with sync state and provenance information. Repeated full downloads are replaced with incremental synchronization based on REDCap activity logs to minimize unnecessary API calls. Users can configure the export of structured, audit-friendly Excel workbooks that preserve metadata context and can de-identify data in accordance with common sharing and review practices. The package comes with a suite of helper methods for applying consistent cleaning and labeling rules and streamlining exports to support robust downstream Shiny applications, pipelines, and analysis functions.</p>
 <h2 data-number="2" id="introduction"><span class="header-section-number">2</span> Introduction</h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span style="display:block;" id="fig:redcapsync-logo"></span>
@@ -2698,8 +2701,8 @@ Figure 1: REDCapSync: Encapsulated REDCap projects for pipelines, functions, and
 <h2 data-number="7" id="design-philosophy-of-redcapsync"><span class="header-section-number">7</span> Design Philosophy of REDCapSync</h2>
 <h3 data-number="7.1" id="encapsulated-redcap-projects"><span class="header-section-number">7.1</span> Encapsulated REDCap Projects</h3>
 <ul>
-<li>Core concept: a REDCap project is represented as a <strong>single structured R object</strong></li>
-<li>Encapsulation of:
+<li><p>Core concept: a REDCap project is represented as a <strong>single structured R object</strong></p></li>
+<li><p>Encapsulation of:</p>
 <ul>
 <li>Project metadata<br />
 </li>
@@ -2708,7 +2711,9 @@ Figure 1: REDCapSync: Encapsulated REDCap projects for pipelines, functions, and
 <li>Records and events<br />
 </li>
 <li>Sync state and provenance</li>
-</ul></li>
+</ul>
+<p>The central unit in REDCapSync is the encapsulated project object, which is first configured using <code>setup_project()</code>. Project setup information cached by REDCapSync includes a user-provided project name, token name, and REDCap directory path, <em>not</em> API tokens or other sensitive information. This setup makes it easy to discover what projects exist locally and to reload them without re-configuration.</p>
+<p>In the simplest case, the object holds a named list of instrument data frames alongside metadata tables describing forms, fields, and project design mappings. Additionally, it contains project-level data like the REDCap version, title, and project ID. The metadata required to interpret fields is available without additional API calls or dependencies, streamlining downstream tasks.</p></li>
 </ul>
 <h3 data-number="7.2" id="separation-of-concerns"><span class="header-section-number">7.2</span> Separation of Concerns</h3>
 <ul>
@@ -2728,7 +2733,8 @@ Figure 1: REDCapSync: Encapsulated REDCap projects for pipelines, functions, and
 <li>Testing<br />
 </li>
 <li>Modularity</li>
-</ul></li>
+</ul>
+REDCapSync also makes separation of concerns explicit. The <code>sync()</code> method retrieves and refreshes project data. Transformation produces analysis-ready exports, such as merged non-repeating forms or fully flattened tables. Export writes structured data to Excel workbooks for sharing and review. Those stages can be used together in a pipeline, but they do not need to be tangled together in user code. This helps teams conduct testing and share small functions that operate on a standardized project object.</li>
 </ul>
 <h3 data-number="7.3" id="designed-for-pipelines-not-just-data-access"><span class="header-section-number">7.3</span> Designed for Pipelines, Not Just Data Access</h3>
 <ul>
